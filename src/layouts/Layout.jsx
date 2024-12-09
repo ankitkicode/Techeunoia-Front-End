@@ -5,16 +5,10 @@ import { useState } from "react";
 
 const Layout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-
   const handleToggle = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
-
-
-    const location = useLocation();
-
-
+const location = useLocation();
     const routeTitles = {
       "/": "Dashboard",
       "/jobs": "Jobs",
@@ -27,31 +21,32 @@ const Layout = () => {
     const currentTitle = routeTitles[location.pathname] || "Dashboard";
 
   return (
-    <div className="h-screen w-full flex flex-row bg-white">
+    <div className="h-screen w-full flex flex-row  bg-white">
       {/* Sidebar */}
       <div 
       className={`mySidebar
       ${isSidebarOpen ? "block absolute z-50 left-0 h-full" : "hidden"}
-         md:w-[20%] md:block`}>
+         md:w-[23%] md:block`}>
         <Sidebar handleToggle={handleToggle} />
       </div>
-
       {/* Main Content */}
-      <div className="main flex-1   overflow-y-auto">
-        <div className="flex items-center justify-between  h-20  w-full sticky top-0 border-b-2">
-          <div className=" h-full w-full px-4 flex items-center justify-between">
+      <div className="main flex-1 px-8  overflow-y-auto">
+        <div className="flex items-center justify-between  bg-white mt-6  w-full sticky md:relative top-0 ">
+          <div className=" h-full w-full px-2 flex items-center justify-between">
             <div className="flex items-center gap-3 ">
               <button className="md:hidden" onClick={handleToggle}>
                 <i className="ri-menu-line text-2xl"></i>
               </button>
- {/* Dynamic title */}
- <h1 className="text-xl font-semibold">{currentTitle}</h1>            </div>
+             {/* Dynamic title */}
+         <h1 className="text-xl font-semibold">{currentTitle}</h1>      
+          </div>
             <div className="flex items-center gap-3">
              <div className="h-8 w-8 bg-[#119EB5] text-white rounded-full flex items-center justify-center">
              <i className="ri-notification-4-line "></i>
              </div>
              <div className="h-8 w-8 bg-[#119EB5] text-white rounded-full flex items-center justify-center">
-              <i className="ri-user-3-line text-sm"></i>
+              <i className="ri-user-3-line text-sm">
+              </i>
              </div>
             </div>
           </div>
