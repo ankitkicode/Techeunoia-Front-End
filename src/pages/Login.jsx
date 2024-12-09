@@ -1,10 +1,11 @@
 
+import { Link } from 'react-router-dom';
 import loginpageGraphics from '../assets/loginpageGraphics.png';
-import PasswordInput from '../components/PasswordInput';
+import InputField from '../components/InputField';
 
 const Login = () => {
   return (
-    <div className="h-screen w-full flex items-center justify-between bg-zinc-600">
+    <div className="h-screen w-full bg-red-600 flex items-center justify-between bg-zinc-600">
       <div className="h-full w-1/2 bg-[#008196] flex items-center justify-center">
         <img src={loginpageGraphics} alt="" />
       </div>
@@ -30,27 +31,44 @@ const Login = () => {
             <p className='text-[#595959] text-[1.07rem] mb-1 mulish-500'>Or login with </p>
           </div>
           <form action="" class="w-full ">
-            <PasswordInput/>
-            
-            <PasswordInput/>
+          <InputField
+        type="email"
+        icon="/icons/email.svg" // Email icon
+        placeholder="Email"
+        id="email"
+      />
+        <InputField
+        type="password"
+        icon="/icons/Password.svg" // Password icon
+        placeholder="Password"
+        id="password"
+      />
+
 
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-              <input
-        type="checkbox"
-        className="sr-only peer"
-      
-      />
-      <div className="w-4 h-4 border-2 border-gray-400 rounded-full peer-checked:bg-blue-500 flex items-center justify-center transition-colors">
-        
-          <div className="w-3 h-3 bg-white rounded-full"></div>
-        
-      </div>
-                <label for="remember" className='text-[#A3A3A3] text-[1.01rem] mulish-700'>Remember me</label>
-              </div>
-              <a href="#" className='text-[#008196] text-[1.01rem] mulish-600'>Forgot password?</a>
+            <div className="flex items-center gap-1">
+  <input 
+    type="checkbox" 
+    name="remember" 
+    id="remember" 
+    className="w-4 h-4 " 
+  />
+  <label htmlFor="remember" className="text-[#A3A3A3] text-[1.01rem] mulish-700">
+    Remember me
+  </label>
+</div>  
+ <a href="#" className='text-[#008196] text-[1.01rem] mulish-600'>Forgot password?</a>
             </div>
             <button className="btn-login w-full h-12 mt-5 text-white bg-[#119EB5] mulish-600">Login</button>
+            {/* <div className='w-full '>
+            <div className="or-sign-with-email relative flex items-center justify-center mt-4">
+            <p className='text-[#595959] text-[1.07rem] mb-1 mulish-500'>Do you have an account? </p>
+          </div>            
+            <button className="btn-login w-full h-12 mt-5 text-white bg-[#119EB5] mulish-600">Sign up</button> 
+              </div> */}
+              <p className='w-full text-center mt-4 mulish-600 text-[#595959]'>
+                Do you have an account? <Link  to={'/auth/register'} className='text-[#008196] text-[1.01rem] mulish-600'>Sign up</Link>
+              </p>
           </form>
         </div>
       </div>

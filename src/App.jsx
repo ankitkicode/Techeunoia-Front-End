@@ -8,6 +8,7 @@ import ContentStrategy from "./pages/ContentStrategy";
 import Setting from "./pages/Setting";
 import AuthLayout from "./layouts/AuthLayout";
 import Register from "./pages/Register";
+import  Login  from "./pages/Login";
 
 const App = () => {
   return (
@@ -16,9 +17,9 @@ const App = () => {
 
      {/* Auth Routes */}
      <Route path="/auth" element={<AuthLayout />}>
-        <Route path="login" element={<AuthLayout />} />
-        {/* Uncomment if these routes are added */}
-         <Route path="register" element={<Register />} />
+          {/* Nested Routes */}
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
        {/* <Route path="forgot-password" element={<ForgotPassword />} />
         <Route path="reset-password" element={<ResetPassword />} /> */}
       </Route>

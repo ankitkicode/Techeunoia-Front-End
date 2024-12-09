@@ -3,6 +3,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@supports (-webkit-touch-callout:none) {
+  /* Edge/Chrome-specific styles here */
+  #eye-button{
+    display: none;
+    opacity: 0;
+  }
+  
+}
+
+
 .mulish-100 {
   font-family: "Mulish", sans-serif;
   font-optical-sizing: auto;
@@ -98,5 +109,29 @@
   transform: translateY(-50%);
   height: .4px;
   width: 33%;
+  background: #909193;
+}
+
+
+.or-sign-with-email::before{
+  content: "";
+  display: block;
+ position: absolute;
+ left: 0;
+ top: 50%;
+  transform: translateY(-50%);
+  height: .4px;
+  width: 22%;
+  background: #909193;
+}
+.or-sign-with-email::after {
+  content: "";
+  display: block;
+ position: absolute;
+ right: 0;
+ top: 50%;
+  transform: translateY(-50%);
+  height: .4px;
+  width: 22%;
   background: #909193;
 }
