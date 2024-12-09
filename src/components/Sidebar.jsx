@@ -5,15 +5,16 @@ import BackpackOutlinedIcon from "@mui/icons-material/BackpackOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 
 const Sidebar = ({handleToggle}) => {
+  
   return (
-    <div id='sidebar' className="h-full relative py-8 shadow-md bg-white">
+    <div id='sidebar' className="h-full relative py-8 shadow-md bg-white px-5">
       {/* Logo Section */}
-      <div className="logo h-14 w-[90%] flex items-center md:ml-8 gap-3 mx-auto">
+      <div className="logo h-14 w-[90%] flex items-center md:ml- gap-3 mx-auto">
         <div className="close">
           <i className="ri-close"></i>
         </div>
         <div className="flex items-center gap-3">
-        <img src={logo} className="h-10 w-10" alt="logo" />
+        <img src={logo} className="h-8 w-8" alt="logo" />
         <h1 className="text-xl font-semibold">Techeunoia</h1>
         </div>
       </div>
@@ -25,7 +26,7 @@ const Sidebar = ({handleToggle}) => {
            </div>
 
       {/* Navigation Links */}
-      <div className="nav-links mt-10 px-6 space-y-4">
+      <div className="nav-links mt-8 px-4 space-y-4">
         <div className="space-y-3">
         <NavLink
           to="/"
@@ -110,7 +111,7 @@ const Sidebar = ({handleToggle}) => {
       </div>
 
       {/* Logout Section */}
-      <div className="mt-44 md:mt-20 px-6">
+      <div className="mt-44 md:mt-10 px-6">
         <div className="flex items-center gap-3 px-4 py-2 bg-white rounded-lg hover:bg-gray-100 hover:text-zinc-600 cursor-pointer">
           <img src={logout} className="h-8 w-8 ml-2 md:ml-4" alt="logout" />
           <span className="font-semibold">Logout</span>
