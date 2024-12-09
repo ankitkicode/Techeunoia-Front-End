@@ -31,7 +31,9 @@ const Login = () => {
           </div>
           <form action="" class="w-full ">
             <PasswordInput/>
+            
             <PasswordInput/>
+
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
               <input
