@@ -82,6 +82,32 @@ const Sidebar = ({handleToggle}) => {
           <span className="font-semibold">Job Seekers</span>
         </NavLink>
         <NavLink
+          to="/application"
+          className={({ isActive }) =>
+            `flex items-center gap-3 px-4 py-2 rounded-lg transition duration-300 ${
+              isActive
+                ? "bg-[#119EB5] text-white"
+                : "bg-white hover:bg-[#119EB5] hover:text-white"
+            }`
+          }
+        >
+          <i className="ri-book-2-line text-2xl"></i>
+          <span className="font-semibold">Applications</span>
+        </NavLink>
+        <NavLink
+          to="/saved"
+          className={({ isActive }) =>
+            `flex items-center gap-3 px-4 py-2 rounded-lg transition duration-300 ${
+              isActive
+                ? "bg-[#119EB5] text-white"
+                : "bg-white hover:bg-[#119EB5] hover:text-white"
+            }`
+          }
+        >
+          <i className="ri-book-2-line text-2xl"></i>
+          <span className="font-semibold">Saved</span>
+        </NavLink>
+        <NavLink
           to="/content-strategy"
           className={({ isActive }) =>
             `flex items-center gap-3 px-4 py-2 rounded-lg transition duration-300 ${

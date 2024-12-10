@@ -9,6 +9,8 @@ import Setting from "./pages/Setting";
 import AuthLayout from "./layouts/AuthLayout";
 import Register from "./pages/Register";
 import  Login  from "./pages/Login";
+import Saved from "./pages/Saved";
+import Application from "./pages/Application";
 
 const App = () => {
   return (
@@ -32,6 +34,9 @@ const App = () => {
         <Route path="jobs" element={<Jobs />} />
         <Route path="employment" element={<Employment />} />
         <Route path="job-seekers" element={<JobSeekers />} />
+        <Route path="application" element={<Application />} />
+        <Route path="saved" element={<Saved />} />
+        
         <Route path="content-strategy" element={<ContentStrategy />} />
         <Route path="settings" element={<Setting />} />
       </Route>
